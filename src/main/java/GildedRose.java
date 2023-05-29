@@ -13,48 +13,27 @@ public class GildedRose {
     }
 
     public void tick() {
-        if(!StringUtils.equals(name, "Aged Brie") && !StringUtils.equals(name, "Backstage passes to a TAFKAL80ETC concert")) {
-            if(quality > 0) {
-                if(!StringUtils.equals(name, "Sulfuras, Hand of Ragnaros")) {
-                    quality -= 1;
-                }
-            }
-        } else {
-            if(quality < 50) {
-                quality += 1;
-                if(StringUtils.equals(name, "Backstage passes to a TAFKAL80ETC concert")) {
-                    if(daysRemaining < 11) {
-                        if(quality < 50) {
-                            quality += 1;
-                        }
-                    }
-                    if(daysRemaining < 6) {
-                        if(quality < 50) {
-                            quality += 1;
-                        }
-                    }
-                }
-            }
+        if(name.equals("Aged Brie")){
+            Aged_Brie aged_brie = new Aged_Brie(name, quality, daysRemaining);
+            aged_brie.tick();
+            quality = aged_brie.getQuality();
+            daysRemaining = aged_brie.getRemainingDays();
         }
-        if(!StringUtils.equals(name, "Sulfuras, Hand of Ragnaros")) {
-            daysRemaining -= 1;
+
+        else if(name.equals("normal")){
+            Normal_tick normal = new Normal_tick(name, quality, daysRemaining);
+            normal.tick();
+            quality = normal.getQuality();
+            daysRemaining = normal.getRemainingDays();
         }
-        if(daysRemaining < 0) {
-            if(!StringUtils.equals(name, "Aged Brie")) {
-                if(!StringUtils.equals(name, "Backstage passes to a TAFKAL80ETC concert")) {
-                    if(quality > 0) {
-                        if(!StringUtils.equals(name, "Sulfuras, Hand of Ragnaros")) {
-                            quality -=1;
-                        }
-                    }
-                } else {
-                    quality = quality - quality;
-                }
-            } else {
-                if(quality < 50) {
-                    quality += 1;
-                }
-            }
+
+        else if(name.equals("Backstage passes to a TAFKAL80ETC concert")){
+            Backstage_pass backstage_pass = new Backstage_pass(name, quality, daysRemaining);
+            backstage_pass.tick();
+            quality = backstage_pass.getQuality();
+            daysRemaining = backstage_pass.getRemainingDays();
         }
+       
     }
+    
 }

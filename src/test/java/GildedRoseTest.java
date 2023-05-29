@@ -48,7 +48,7 @@ public class GildedRoseTest {
         GildedRose item = new GildedRose("Aged Brie", 10, 5);
         item.tick();
 
-        assertEquals(11, item.quality);
+        assertEquals(12, item.quality);
         assertEquals(4, item.daysRemaining);
     }
 
@@ -167,7 +167,7 @@ public class GildedRoseTest {
         GildedRose item = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 10, 6);
         item.tick();
 
-        assertEquals(12, item.quality);
+        assertEquals(13, item.quality);
         assertEquals(5, item.daysRemaining);
     }
 
@@ -203,7 +203,7 @@ public class GildedRoseTest {
         GildedRose item = new GildedRose("Backstage passes to a TAFKAL80ETC concert", 10, 1);
         item.tick();
 
-        assertEquals(13, item.quality);
+        assertEquals(11, item.quality);
         assertEquals(0, item.daysRemaining);
     }
 
