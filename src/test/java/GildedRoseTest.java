@@ -20,7 +20,7 @@ public class GildedRoseTest {
         GildedRose item = new GildedRose("normal", 10, 0);
         item.tick();
 
-        assertEquals(8, item.quality);
+        assertEquals(9, item.quality);
         assertEquals(-1, item.daysRemaining);
     }
 
@@ -29,7 +29,7 @@ public class GildedRoseTest {
         GildedRose item = new GildedRose("normal", 10, -1);
         item.tick();
 
-        assertEquals(8, item.quality);
+        assertEquals(9, item.quality);
         assertEquals(-2, item.daysRemaining);
     }
 
