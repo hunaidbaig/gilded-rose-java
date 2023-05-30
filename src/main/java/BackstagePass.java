@@ -1,6 +1,6 @@
-public class Backstage_pass extends GildedRose{
+public class BackstagePass extends GildedRose{
     
-    public Backstage_pass(String name, int quality, int daysRemaining){
+    public BackstagePass(String name, int quality, int daysRemaining){
         super(name, quality, daysRemaining);
     }
 

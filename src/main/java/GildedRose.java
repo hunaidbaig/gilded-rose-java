@@ -14,7 +14,7 @@ public class GildedRose {
 
     public void tick() {
         if(name.equals("Aged Brie")){
-            Aged_Brie aged_brie = new Aged_Brie(name, quality, daysRemaining);
+            AgedBrie aged_brie = new AgedBrie(name, quality, daysRemaining);
             aged_brie.tick();
             quality = aged_brie.getQuality();
             daysRemaining = aged_brie.getRemainingDays();
@@ -28,7 +28,7 @@ public class GildedRose {
         }
 
         else if(name.equals("Backstage passes to a TAFKAL80ETC concert")){
-            Backstage_pass backstage_pass = new Backstage_pass(name, quality, daysRemaining);
+            BackstagePass backstage_pass = new BackstagePass(name, quality, daysRemaining);
             backstage_pass.tick();
             quality = backstage_pass.getQuality();
             daysRemaining = backstage_pass.getRemainingDays();

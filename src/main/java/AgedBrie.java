@@ -1,6 +1,6 @@
-public class Aged_Brie extends GildedRose{
+public class AgedBrie extends GildedRose{
     
-    public Aged_Brie(String name, int quality, int daysRemaining){
+    public AgedBrie(String name, int quality, int daysRemaining){
         super(name, quality, daysRemaining);
     }
 
